@@ -16,7 +16,7 @@ const CarouselBanner = () => {
       {fetchArticleList()
         .filter(({ showBanner }) => showBanner)
         .map(({ articleId, imgId, title, caption }) => (
-          <Carousel.Item>
+          <Carousel.Item key={articleId}>
             <Link to={`/article/${articleId}`}>
               <Picsum className="d-block w-100" id={imgId} />
               <Carousel.Caption>
