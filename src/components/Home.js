@@ -47,6 +47,7 @@ const Home = () => {
               flex: "0 0 fit-content",
               borderRadius: "100rem",
               fontSize: "0.9rem",
+              whiteSpace: "nowrap",
             }}
             onClick={toggleTag(categoryName)}
           >
