@@ -11,7 +11,12 @@ import {
 import { Link } from "react-router-dom";
 
 const Header = () => (
-  <Navbar expand={false} sticky="top" bg="light">
+  <Navbar
+    expand={false}
+    sticky="top"
+    bg="light"
+    style={{ boxShadow: "0 0rem 1rem #00000088" }}
+  >
     <Container>
       <Navbar.Brand style={{ fontWeight: "bold" }}>
         <Link to="/">ふじえだアプリ</Link>
@@ -34,7 +39,9 @@ const Header = () => (
               className="me-2"
               aria-label="検索"
             />
-            <Button variant="outline-success" style={{width:"5rem"}} >検索</Button>
+            <Button variant="outline-success" style={{ width: "5rem" }}>
+              検索
+            </Button>
           </Form>
           <hr />
           <Nav className="justify-content-end flex-grow-1 pe-3">

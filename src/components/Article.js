@@ -22,7 +22,6 @@ const Article = (props) => {
   };
   return (
     <Container fluid className="p-0">
-      <Header />
       <Container
         style={{
           padding: 0,

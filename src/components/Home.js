@@ -16,7 +16,6 @@ const Home = () => {
   };
   return (
     <Container style={{ padding: "0 0 1rem 0" }}>
-      <Header />
       <Container className="p-0">
         <CarouselBanner />
       </Container>
