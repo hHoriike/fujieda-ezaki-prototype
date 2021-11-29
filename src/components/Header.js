@@ -45,17 +45,23 @@ const Header = () => (
           </Form>
           <hr />
           <Nav className="justify-content-end flex-grow-1 pe-3">
-            <Nav.Link>
+            <Nav.Link as="div">
               <Link to="/">ホーム</Link>
             </Nav.Link>
-            <Nav.Link>
-              <Link to="/">利用規約</Link>
+            <Nav.Link as="div">
+              <Link to="/" target="_blank">
+                利用規約
+              </Link>
             </Nav.Link>
-            <Nav.Link>
-              <Link to="/">プライバシーポリシー</Link>
+            <Nav.Link as="div">
+              <Link to="/" target="_blank">
+                プライバシーポリシー
+              </Link>
             </Nav.Link>
-            <Nav.Link>
-              <Link to="/">このアプリについて</Link>
+            <Nav.Link as="div">
+              <Link to="/" target="_blank">
+                このアプリについて
+              </Link>
             </Nav.Link>
           </Nav>
         </Offcanvas.Body>

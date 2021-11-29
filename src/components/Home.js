@@ -2,7 +2,6 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import { fetchArticleList } from "../api/fetchArticle";
 import CarouselBanner from "./CarouselBanner";
-import Header from "./Header";
 import NewsCard from "./NewsCard";
 
 const Home = () => {

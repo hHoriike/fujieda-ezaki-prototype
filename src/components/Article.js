@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Card, Container, Modal, Button } from "react-bootstrap";
+import { Card, Container } from "react-bootstrap";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import { fetchArticle } from "../api/fetchArticle";
-import Header from "./Header";
+import ConsumeCouponModal from "./ConsumeCouponModal";
 import Picsum from "./Picsum";
 
 const Article = (props) => {
@@ -68,7 +68,7 @@ const Article = (props) => {
         <hr />
         <div className="pt-3" style={{ textAlign: "center" }}>
           {text?.split("\n").map((paragraph) => (
-            <p>{paragraph}</p>
+            <p key={paragraph} >{paragraph}</p>
           ))}
         </div>
       </Container>
@@ -128,24 +128,3 @@ const Article = (props) => {
 };
 
 export default Article;
-
-const ConsumeCouponModal = ({ show, onHide, confirmed }) => (
-  <Modal
-    show={show}
-    onHide={onHide}
-    size="lg"
-    aria-labelledby="contained-modal-title-vcenter"
-    centered
-  >
-    <Modal.Body>
-      <h4 className="mb-4">このクーポンを使用しますか？</h4>
-      <p>一度使用したクーポンは使えなくなります</p>
-    </Modal.Body>
-    <Modal.Footer>
-      <Button onClick={confirmed}>クーポンを使う</Button>
-      <Button onClick={onHide} variant="light">
-        キャンセル
-      </Button>
-    </Modal.Footer>
-  </Modal>
-);

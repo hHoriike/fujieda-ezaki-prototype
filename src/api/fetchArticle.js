@@ -17,9 +17,9 @@ const articles = [
     showBanner: false,
     coupon: {
       id: 100,
-      title: "藤枝市グルメ500円引きクーポン",
+      title: "ドリンク1杯無料券",
       description:
-        "藤枝市内の提携店でこのクーポンを使用するとお会計から500円引き！",
+        "コーヒー、紅茶、ジュース類が1杯無料!",
       start: "2021-04-01",
       end: "2022-03-31",
     },
@@ -69,10 +69,10 @@ const articles = [
     text: `ここに本文`,
     showBanner: false,
     coupon: {
-      id: 100,
-      title: "藤枝グルメ500円クーポン",
+      id: 104,
+      title: "500円引きクーポン",
       description:
-        "藤枝市内の提携店でこのクーポンを使用するとお会計が500円引き！",
+        "お会計時に提示すると500円引き!",
       start: "2021-04-01",
       end: "2022-03-31",
     },
