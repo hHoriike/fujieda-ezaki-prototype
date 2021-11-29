@@ -56,7 +56,7 @@ const articles = [
     category: "警察署からのお知らせ",
     categoryColor: "#88c",
     text: `ここに本文`,
-    showBanner: false,
+    showBanner: true,
   },
   {
     articleId: 4,
@@ -105,7 +105,7 @@ const articles = [
     category: "市役所からのお知らせ",
     categoryColor: "#c8c",
     text: `ここに本文`,
-    showBanner: true,
+    showBanner: false,
   },
 ];
 

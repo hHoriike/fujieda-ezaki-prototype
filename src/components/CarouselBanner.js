@@ -18,7 +18,7 @@ const CarouselBanner = () => {
         .map(({ articleId, imgId, title, caption }) => (
           <Carousel.Item key={articleId}>
             <Link to={`/article/${articleId}`}>
-              <Picsum className="d-block w-100" id={imgId} />
+              <Picsum className="d-block w-100" id={imgId} filter="brightness(0.8)" />
               <Carousel.Caption>
                 <h3>{title}</h3>
                 <p>{caption}</p>
