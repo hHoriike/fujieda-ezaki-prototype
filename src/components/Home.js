@@ -30,6 +30,7 @@ const Home = () => {
         }}
       >
         {[
+          "クーポン",
           "グルメ",
           "健康・美容",
           "警察署からのお知らせ",
@@ -64,9 +65,18 @@ const Home = () => {
         }}
       >
         {fetchArticleList()
-          .filter(({ category }) => tag === null || tag === category)
+          .filter(
+            ({ category, coupon = null }) =>
+              tag === null ||
+              tag === category ||
+              (tag === "クーポン" && !!coupon)
+          )
           .map((props) => (
-            <NewsCard key={props.articleId} {...props} />
+            <NewsCard
+              key={props.articleId}
+              {...props}
+              showCoupon={tag === "クーポン"}
+            />
           ))}
       </Container>
     </Container>

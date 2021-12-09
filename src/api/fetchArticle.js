@@ -18,8 +18,7 @@ const articles = [
     coupon: {
       id: 100,
       title: "ドリンク1杯無料券",
-      description:
-        "コーヒー、紅茶、ジュース類が1杯無料!",
+      description: "コーヒー、紅茶、ジュース類が1杯無料!",
       start: "2021-04-01",
       end: "2022-03-31",
     },
@@ -33,6 +32,13 @@ const articles = [
     categoryColor: "#c88",
     text: `ここに本文`,
     showBanner: false,
+    coupon: {
+      id: 201,
+      title: "カット500円引きクーポン",
+      description: "お会計時に提示すると500円引き!",
+      start: "2021-04-01",
+      end: "2022-03-31",
+    },
   },
   {
     articleId: 2,
@@ -71,8 +77,7 @@ const articles = [
     coupon: {
       id: 104,
       title: "500円引きクーポン",
-      description:
-        "お会計時に提示すると500円引き!",
+      description: "お会計時に提示すると500円引き!",
       start: "2021-04-01",
       end: "2022-03-31",
     },
