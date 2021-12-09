@@ -5,12 +5,12 @@ import CarouselBanner from "./CarouselBanner";
 import NewsCard from "./NewsCard";
 
 const Home = () => {
-  const [tags, setTags] = React.useState([]);
+  const [tag, setTag] = React.useState(null);
   const toggleTag = (name) => () => {
-    if (tags.includes(name)) {
-      setTags((tags) => tags.filter((t) => t !== name));
+    if (tag === name) {
+      setTag(null);
     } else {
-      setTags((tags) => [...tags, name]);
+      setTag(name);
     }
   };
   return (
@@ -39,8 +39,8 @@ const Home = () => {
           <span
             key={categoryName}
             style={{
-              backgroundColor: tags.includes(categoryName) ? "#555" : "#EEE",
-              color: tags.includes(categoryName) ? "#FFF" : "#000",
+              backgroundColor: tag === categoryName ? "#555" : "#EEE",
+              color: tag === categoryName ? "#FFF" : "#000",
               padding: "0.1rem 0.4rem",
               flex: "0 0 fit-content",
               borderRadius: "100rem",
@@ -64,9 +64,7 @@ const Home = () => {
         }}
       >
         {fetchArticleList()
-          .filter(
-            ({ category }) => tags.length === 0 || tags?.includes(category)
-          )
+          .filter(({ category }) => tag === null || tag === category)
           .map((props) => (
             <NewsCard key={props.articleId} {...props} />
           ))}

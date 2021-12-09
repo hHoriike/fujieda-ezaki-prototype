@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Article from "./Article";
-import BottomTabNavigator from "./BottomTabNavigator";
 import CouponList from "./CouponList";
 import Header from "./Header";
 import Home from "./Home";
@@ -20,8 +19,6 @@ const Routings = () => (
         <Route path="map" element={<Map />} />
       </Route>
     </Routes>
-    <div style={{ height: "4rem" }} />
-    <BottomTabNavigator />
   </BrowserRouter>
 );
 
